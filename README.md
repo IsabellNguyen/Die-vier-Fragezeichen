@@ -7,6 +7,7 @@ Gegenstände können mit der Hand eingesammelt werden✅<br>
 Gegenstände verfolgen die Hand<br>
 Gegenstände lassen sich im Korb ablegen<br>
 Es funktioniert mit beiden Händen<br>
+User wird als Schatten dargestellt<br>
 <br><br>
 Aus Test-Branch implementiert:<br>
 Sound bei Collision✅<br>
