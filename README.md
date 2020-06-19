@@ -4,14 +4,14 @@ Contact: Lotte<br>
 # Goal: <br>
 The scene has 3 statuses: <br>
 <br>
-###Introduction<br>
+### Introduction<br>
 - Narrator narrates 💖<br>
 - Shadow of user is augmented: basket, hood, cape 💖<br>
 - Collectables appear when narrator is done🧡<br>
 - Atmospheric sounds: wind, birds, insects, trees🧡🧡<br>
 - Movement sounds: footsteps, rustling of fabric🤍<br>
 <br>
-###Main<br>
+### Main<br>
 - basket sits on ground💖<br>
 - User can interact with collectables: picking them up and puttig them into the basket💖💖<br>
 - User has to collect 5 flowers and now weeds to win💖<br>
@@ -23,7 +23,7 @@ The scene has 3 statuses: <br>
 - Narrator's giving tips after 20 seconds without interaction. 5 tips until they give solution plus explanation🤍<br>
 - User can throw collectable away with shaking their hands🤍<br>
 <br>
-###End<br>
+### End<br>
 - Narrator transitions to next scene💖<br>
 - Shadow of user is augmented 💖<br>
 - Atmospheric sounds: wind, birds, insects, trees🧡🧡<br>
@@ -31,7 +31,7 @@ The scene has 3 statuses: <br>
 <br>
 <br>
 <br>
-###Legend:<br>
+### Legend:<br>
 💝 = done<br>
 💖 = essential<br>
 🧡 = nice to have but not priority<br>
