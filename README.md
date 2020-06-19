@@ -30,7 +30,6 @@ The scene has 3 statuses: <br>
 - Movement sounds: footsteps, rustling of fabric 🤍<br>
 <br>
 <br>
-<br>
 ### Legend:<br>
 💝 = done<br>
 💖 = essential<br>
