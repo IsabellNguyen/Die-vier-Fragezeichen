@@ -8,15 +8,13 @@ public class KinectOverlayer : MonoBehaviour
 //	public Vector3 BottomRight;
 //	public Vector3 BottomLeft;
 
-	//public GUITexture backgroundImage;
 	public KinectWrapper.NuiSkeletonPositionIndex TrackedJoint = KinectWrapper.NuiSkeletonPositionIndex.HandRight;
 	public GameObject OverlayObject;
-	public float smoothFactor = 1f;
-	public Vector3 posJoint;
-	//public GUIText debugText;
-
+	public float smoothFactor = 100f;
+	
 	private float distanceToCamera = 10f;
 
+	private bool MirroredMovement = false;
 
 	void Start()
 	{
@@ -24,7 +22,6 @@ public class KinectOverlayer : MonoBehaviour
 		{
 			distanceToCamera = (OverlayObject.transform.position - Camera.main.transform.position).magnitude;
 		}
-
 	}
 	
 	void Update() 
@@ -33,17 +30,12 @@ public class KinectOverlayer : MonoBehaviour
 		
 		if(manager && manager.IsInitialized())
 		{
-			//backgroundImage.renderer.material.mainTexture = manager.GetUsersClrTex();
-			/*if(backgroundImage && (backgroundImage.texture == null))
-			{
-				backgroundImage.texture = manager.GetUsersClrTex();
-			}
 			
-*/
-			//			Vector3 vRight = BottomRight - BottomLeft;
+			
+//			Vector3 vRight = BottomRight - BottomLeft;
 //			Vector3 vUp = TopLeft - BottomLeft;
 			
-			int iJointIndex = (int)TrackedJoint ;
+			int iJointIndex = (int)TrackedJoint;
 			
 			if(manager.IsUserDetected())
 			{
@@ -51,10 +43,9 @@ public class KinectOverlayer : MonoBehaviour
 				
 				if(manager.IsJointTracked(userId, iJointIndex))
 				{
-				
-					posJoint = manager.GetRawSkeletonJointPos(userId, iJointIndex);
-					OverlayObject.tag = "joint";
-					if (posJoint != Vector3.zero)
+					Vector3 posJoint = manager.GetRawSkeletonJointPos(userId, iJointIndex);
+					posJoint = posJoint + new Vector3 (0, (float)0.5, 0);
+					if(posJoint != Vector3.zero)
 					{
 						// 3d position to depth
 						Vector2 posDepth = manager.GetDepthMapPosForJointPos(posJoint);
@@ -69,11 +60,7 @@ public class KinectOverlayer : MonoBehaviour
 //						Vector3 vPosOverlay = backgroundImage.transform.TransformPoint(localPos);
 						//Vector3 vPosOverlay = BottomLeft + ((vRight * scaleX) + (vUp * scaleY));
 
-						/*if(debugText)
-						{
-							debugText.GetComponent<GUIText>().text = "Tracked user ID: " + userId;  // new Vector2(scaleX, scaleY).ToString();
-						}
-						*/
+						
 						if(OverlayObject)
 						{
 							Vector3 vPosOverlay = Camera.main.ViewportToWorldPoint(new Vector3(scaleX, scaleY, distanceToCamera));

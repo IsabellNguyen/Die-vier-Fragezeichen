@@ -249,7 +249,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f8348a9bbd6ca410aab15a90f61261ad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 043b483c3d60ecf439368ba7f2cfb28c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -381,9 +381,9 @@ GameObject:
   - component: {fileID: 1025544536}
   - component: {fileID: 1025544535}
   - component: {fileID: 1025544534}
-  - component: {fileID: 1025544533}
   - component: {fileID: 1025544532}
   - component: {fileID: 1025544531}
+  - component: {fileID: 1025544533}
   m_Layer: 0
   m_Name: flower (1)
   m_TagString: flower
@@ -517,7 +517,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1025544530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1270abe3a24bc4af788e33417fe2ec05, type: 3}
+  m_Script: {fileID: 11500000, guid: 041bbdb6271d56c4e88e82fb086ecc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &1025544534
@@ -583,7 +583,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 20a14c6ba6886444b85fc5c9273981ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 215d55504ab43094e8722ed064b297a8, type: 3}
   m_Color: {r: 0.45098042, g: 0.44705886, b: 0.45098042, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -602,12 +602,30 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025544530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.16, y: -6.4, z: 0}
+  m_LocalPosition: {x: -4.85, y: -0.99, z: 0}
   m_LocalScale: {x: -1.298729, y: 1.2987293, z: 1.2987293}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2052377714 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9094700056803048050, guid: 8a3139ec750f9e443b6be4f128d62bdc,
+    type: 3}
+  m_PrefabInstance: {fileID: 9094700057397230185}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2052377715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052377714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041bbdb6271d56c4e88e82fb086ecc5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3142126609392291827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -744,5 +762,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3270595749910458432, guid: 8a3139ec750f9e443b6be4f128d62bdc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8a3139ec750f9e443b6be4f128d62bdc, type: 3}

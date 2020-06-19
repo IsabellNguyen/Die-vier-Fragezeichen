@@ -7,6 +7,8 @@ TagManager:
   - flower
   - basket
   - joint
+  - basketFlower
+  - empty
   layers:
   - Default
   - TransparentFX
