@@ -12,8 +12,8 @@ The scene has 3 statuses: <br>
 - Movement sounds: footsteps, rustling of fabric 🤍<br>
 <br>
 ### Main<br>
-- basket sits on ground 💖<br>
-- User can interact with collectables: picking them up and puttig them into the basket 💖💖<br>
+- basket sits on ground 💝<br>
+- User can interact with collectables: picking them up and puttig them into the basket 💝<br>
 - User has to collect 5 flowers and no weeds to win 💖<br>
 - Shadow of user is augmented: hood, cape 💖<br>
 - Sounds for feedback (picking flowers, picking weed, putting flowers into basket, end of game, start of game) 🧡🧡<br>
