@@ -25,11 +25,13 @@ public class JointFlower : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        
+        print("triggered joint");
         if (col.gameObject.CompareTag("flower")&&gameObject.tag=="empty")
         {
             gameObject.GetComponent<AudioSource>().Play();
             this.GetComponent<SpriteRenderer>().enabled = true;
+            print("ein wildes jointFlower erscheit");
+
         }
 
 
@@ -37,6 +39,8 @@ public class JointFlower : MonoBehaviour
         {
             gameObject.GetComponent<AudioSource>().Play();
             this.GetComponent<SpriteRenderer>().enabled = false;
+            print("ein wildes jointFlower entkommt");
+
         }
     }
 }

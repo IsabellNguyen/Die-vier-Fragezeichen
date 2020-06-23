@@ -3,19 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class flower : MonoBehaviour
-{
+public class flower : MonoBehaviour {
+    
     // Start is called before the first frame update
     void Start()
     {
         gameObject.tag = "flower";
+
     }
 
     void Update()
     {
-        if (!this.GetComponent<SpriteRenderer>().enabled)
+        if (!this.isActiveAndEnabled)
         {
-            gameObject.tag = "Finish";
+            this.tag = "Finish";
+        }
+        else
+        {
+            this.tag = "flower";
         }
     }
 
@@ -23,8 +28,11 @@ public class flower : MonoBehaviour
     {
         if (col.gameObject.CompareTag("empty"))
         {
-            this.GetComponent<SpriteRenderer>().enabled = false;
+            gameObject.SetActive(true);
+            print("ein wildes flower entkommt");
         }
+        print("flower triggered");
+
     }
 
 }

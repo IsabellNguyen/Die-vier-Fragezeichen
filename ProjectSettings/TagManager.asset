@@ -9,6 +9,7 @@ TagManager:
   - joint
   - basketFlower
   - empty
+  - backImage
   layers:
   - Default
   - TransparentFX

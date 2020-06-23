@@ -21,10 +21,13 @@ public class BasketFlower : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        print("basket triggered");
         if (col.gameObject.CompareTag("joint")&&gameObject.tag=="basketFlower")
         {
             this.GetComponent<SpriteRenderer>().enabled = true;
+            print("ein wildes basketFlower erscheint");
         }
+        
     }
 
 }
