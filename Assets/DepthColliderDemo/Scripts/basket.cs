@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class basket : MonoBehaviour
 {
-
-
+    public Transform child;
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        gameObject.tag = "basket";
-        
+        if (child.childCount > 4)
+        {
+            print("Well done!");
+            
+        }
+       
     }
 
 

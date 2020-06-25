@@ -4,43 +4,54 @@ using UnityEngine;
 
 public class JointFlower : MonoBehaviour
 {
+    private GestureListener GestureListener;
 
-   void Start()
+    void Start()
     {
         gameObject.tag = "empty";
+
+        // get the gestures listener
+        GestureListener = Camera.main.GetComponent<GestureListener>();
     }
     
     void Update()
     {
-
+        KinectManager kinectManager = KinectManager.Instance;
+        if ((!kinectManager || !kinectManager.IsInitialized() || !kinectManager.IsUserDetected()))
+            return;
         //gameObject.transform.position += new Vector3 (0,1f,0);
-        if (this.GetComponent<SpriteRenderer>().enabled)
+        if (this.transform.childCount == 0)
+        {
+            gameObject.tag = "empty";
+        }
+        else if(this.transform.GetChild(0).tag == "weedFinish")
+        {
+            gameObject.tag = "evil";
+        }
+        else
+        if (this.transform.GetChild(0).tag == "flowerFinish")
         {
             gameObject.tag = "joint";
         }
-        else {
-            gameObject.tag = "empty";
+
+        if (GestureListener) 
+        {
+            if (GestureListener.IsSwipeRight())
+            {
+                print("waved");
+            }
         }
+            
     }
 
     void OnTriggerEnter2D(Collider2D col)
-    {
-        print("triggered joint");
-        if (col.gameObject.CompareTag("flower")&&gameObject.tag=="empty")
-        {
+    {   gameObject.GetComponent<AudioSource>().Play();
+            
+
+
+        
             gameObject.GetComponent<AudioSource>().Play();
-            this.GetComponent<SpriteRenderer>().enabled = true;
-            print("ein wildes jointFlower erscheit");
 
-        }
-
-
-        if (col.gameObject.CompareTag("basketFlower")&& gameObject.tag == "joint")
-        {
-            gameObject.GetComponent<AudioSource>().Play();
-            this.GetComponent<SpriteRenderer>().enabled = false;
-            print("ein wildes jointFlower entkommt");
-
-        }
+        
     }
 }

@@ -29,9 +29,10 @@ public class basketShowDelay : MonoBehaviour
             {
                 grass.Play();
                 child.transform.SetParent(parent);
-                child.transform.localPosition = new Vector3(0, 0, 0);
+                //child.transform.localPosition = new Vector3(0, 0, 0);
+                child.transform.localPosition = new Vector3(-3,-2, 0);
                 child.transform.localScale = new Vector3(1, 1, 20);
-                //child.transform.rotate = new Vector3(0, 0, 0);
+                child.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
             }
 
         }

@@ -4,34 +4,44 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class flower : MonoBehaviour {
-    
+
+
+    public GameObject child;
+    public Transform parent;
+
+    private SpriteRenderer sprite;
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.tag = "flower";
-
+        sprite = GetComponent<SpriteRenderer>();
+        if(sprite.name=="tulpe"||sprite.name == "gänse")
+        {
+            gameObject.tag = "flower";
+        }
+        else
+        {
+            gameObject.tag = "weed";
+        }
+        child = this.gameObject;
+        
     }
 
     void Update()
     {
-        if (!this.isActiveAndEnabled)
-        {
-            this.tag = "Finish";
-        }
-        else
-        {
-            this.tag = "flower";
-        }
+        
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("empty"))
+        if (col.gameObject.CompareTag("empty")&& (gameObject.tag == "flower"|| gameObject.tag == "weed"))
         {
-            gameObject.SetActive(true);
-            print("ein wildes flower entkommt");
+            
+            child.transform.SetParent(parent);
+            child.transform.localPosition = new Vector3(0, 0, 0);
+            child.transform.localScale = new Vector3(0.5f, 0.5f, 20);
+            child.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            this.tag += "Finish";
         }
-        print("flower triggered");
 
     }
 
