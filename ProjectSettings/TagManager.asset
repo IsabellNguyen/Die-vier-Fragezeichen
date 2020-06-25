@@ -10,6 +10,10 @@ TagManager:
   - basketFlower
   - empty
   - backImage
+  - weed
+  - evil
+  - weedFinish
+  - flowerFinish
   layers:
   - Default
   - TransparentFX
