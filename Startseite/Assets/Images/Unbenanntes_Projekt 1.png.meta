@@ -1,0 +1,314 @@
+fileFormatVersion: 2
+guid: eb7f8c99727fa43769d55d7e4d395a62
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -768671228401663963
+    second: Unbenanntes_Projekt 1_0
+  - first:
+      213: -518593470471593904
+    second: Unbenanntes_Projekt 1_1
+  - first:
+      213: -2162577806436350678
+    second: Unbenanntes_Projekt 1_2
+  - first:
+      213: -754589046624015145
+    second: Unbenanntes_Projekt 1_3
+  - first:
+      213: 1659157842617917038
+    second: Unbenanntes_Projekt 1_4
+  - first:
+      213: 8659453784882448606
+    second: Unbenanntes_Projekt 1_5
+  - first:
+      213: 194959705458425483
+    second: Unbenanntes_Projekt 1_6
+  - first:
+      213: 5851358705839730406
+    second: Unbenanntes_Projekt 1_7
+  - first:
+      213: -8070467195234066989
+    second: Unbenanntes_Projekt 1_8
+  - first:
+      213: -2590698070495970736
+    second: Unbenanntes_Projekt 1_9
+  - first:
+      213: 631430309761781439
+    second: Unbenanntes_Projekt 1_10
+  - first:
+      213: 7243939779956098997
+    second: Unbenanntes_Projekt 1_11
+  - first:
+      213: 6407412629057280701
+    second: Unbenanntes_Projekt 1_12
+  - first:
+      213: 6498054654459967971
+    second: Unbenanntes_Projekt 1_13
+  - first:
+      213: -2822185415322907224
+    second: Unbenanntes_Projekt 1_14
+  - first:
+      213: 8952065844705071311
+    second: Unbenanntes_Projekt 1_15
+  - first:
+      213: -4142326656251461645
+    second: Unbenanntes_Projekt 1_16
+  - first:
+      213: 6349921496034520031
+    second: Unbenanntes_Projekt 1_17
+  - first:
+      213: 8154742724994522622
+    second: Unbenanntes_Projekt 1_18
+  - first:
+      213: 8887857903859056286
+    second: Unbenanntes_Projekt 1_19
+  - first:
+      213: -2060716494209134549
+    second: Unbenanntes_Projekt 1_20
+  - first:
+      213: 5507863694641438925
+    second: Unbenanntes_Projekt 1_21
+  - first:
+      213: -7923162083697303976
+    second: Unbenanntes_Projekt 1_22
+  - first:
+      213: -4321520602948804765
+    second: Unbenanntes_Projekt 1_23
+  - first:
+      213: -7489642881731524631
+    second: Unbenanntes_Projekt 1_24
+  - first:
+      213: -1931253833015498512
+    second: Unbenanntes_Projekt 1_25
+  - first:
+      213: -7073475766817219246
+    second: Unbenanntes_Projekt 1_26
+  - first:
+      213: 6408843193936231734
+    second: Unbenanntes_Projekt 1_27
+  - first:
+      213: 6031265901455420195
+    second: Unbenanntes_Projekt 1_28
+  - first:
+      213: -2466575228084040349
+    second: Unbenanntes_Projekt 1_29
+  - first:
+      213: -5438276242688150930
+    second: Unbenanntes_Projekt 1_30
+  - first:
+      213: 2474329916496252658
+    second: Unbenanntes_Projekt 1_31
+  - first:
+      213: 7106062225112431113
+    second: Unbenanntes_Projekt 1_32
+  - first:
+      213: -195402820334926007
+    second: Unbenanntes_Projekt 1_33
+  - first:
+      213: 6596567847446153021
+    second: Unbenanntes_Projekt 1_34
+  - first:
+      213: 9115247309051880436
+    second: Unbenanntes_Projekt 1_35
+  - first:
+      213: -156228479450027841
+    second: Unbenanntes_Projekt 1_36
+  - first:
+      213: -7388133429091154
+    second: Unbenanntes_Projekt 1_37
+  - first:
+      213: 6382293665387553695
+    second: Unbenanntes_Projekt 1_38
+  - first:
+      213: 8952534804782559282
+    second: Unbenanntes_Projekt 1_39
+  - first:
+      213: 8382115823225351622
+    second: Unbenanntes_Projekt 1_40
+  - first:
+      213: 3866380988724000756
+    second: Unbenanntes_Projekt 1_41
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Unbenanntes_Projekt 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5204e0227912555f0800000000000000
+      internalID: -768671228401663963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unbenanntes_Projekt 1_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 250
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05024b97cf59dc8f0800000000000000
+      internalID: -518593470471593904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unbenanntes_Projekt 1_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25c73061fafcf1e0800000000000000
+      internalID: -2162577806436350678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unbenanntes_Projekt 1_3
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc239492492785f0800000000000000
+      internalID: -754589046624015145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
