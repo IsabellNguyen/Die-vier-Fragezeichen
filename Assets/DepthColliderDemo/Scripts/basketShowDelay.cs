@@ -5,13 +5,15 @@ using UnityEngine;
 public class basketShowDelay : MonoBehaviour
 {
     public AudioSource intro;
-    public int waitTime = 30;
+    public int waitTime = 320;
     private int count = 0;
 
     public AudioSource grass;
 
     public GameObject child;
     public Transform parent;
+
+    public GameObject hand;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,17 +27,31 @@ public class basketShowDelay : MonoBehaviour
         if (!intro.isPlaying)
         {
             count++;
-            if (count == waitTime)
-            {
-                grass.Play();
-                child.transform.SetParent(parent);
-                //child.transform.localPosition = new Vector3(0, 0, 0);
-                child.transform.localPosition = new Vector3(-3,-2, 0);
-                child.transform.localScale = new Vector3(1, 1, 20);
-                child.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-            }
+            ongoing();
+            
 
         }
+    }
+
+    public bool ongoing()
+    {
+        if (count == waitTime)
+        {
+
+            grass.Play();
+            child.transform.SetParent(parent);
+            //child.transform.localPosition = new Vector3(0, 0, 0);
+            child.transform.localPosition = new Vector3(1, -5.7f, 0);
+            child.transform.localScale = new Vector3(1, 1, 20);
+            child.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            hand.gameObject.tag = "empty";
+            return true;
+        }
+        else if (count > waitTime)
+        {
+            return false;
+        }
+        return true;
     }
 }
 

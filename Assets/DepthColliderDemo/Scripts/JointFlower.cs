@@ -5,13 +5,15 @@ using UnityEngine;
 public class JointFlower : MonoBehaviour
 {
     private GestureListener GestureListener;
-
+    public basketShowDelay show;
+    public basket flowers;
     void Start()
     {
-        gameObject.tag = "empty";
+        gameObject.tag = "end";
 
         // get the gestures listener
         GestureListener = Camera.main.GetComponent<GestureListener>();
+        show =  show.GetComponent<basketShowDelay>();
     }
     
     void Update()
@@ -20,27 +22,32 @@ public class JointFlower : MonoBehaviour
         if ((!kinectManager || !kinectManager.IsInitialized() || !kinectManager.IsUserDetected()))
             return;
         //gameObject.transform.position += new Vector3 (0,1f,0);
-        if (this.transform.childCount == 0)
-        {
-            gameObject.tag = "empty";
-        }
-        else if(this.transform.GetChild(0).tag == "weedFinish")
-        {
-            gameObject.tag = "evil";
-        }
-        else
-        if (this.transform.GetChild(0).tag == "flowerFinish")
-        {
-            gameObject.tag = "joint";
-        }
 
-        if (GestureListener) 
+        if (!show.ongoing() && !flowers.Outro())
         {
-            if (GestureListener.IsSwipeRight())
+            if (this.transform.childCount == 0)
             {
-                print("waved");
+                gameObject.tag = "empty";
+            }
+            else if (this.transform.GetChild(0).tag == "weedFinish")
+            {
+                gameObject.tag = "evil";
+            }
+            else
+            if (this.transform.GetChild(0).tag == "flowerFinish")
+            {
+                gameObject.tag = "joint";
+            }
+
+            if (GestureListener)
+            {
+                if (GestureListener.IsSwipeRight())
+                {
+                    print("waved");
+                }
             }
         }
+       
             
     }
 

@@ -4,18 +4,26 @@ using UnityEngine;
 
 public class basket : MonoBehaviour
 {
-    public Transform child;
+    public AudioClip outro;
+    public GameObject hand;
+
+   
     // Start is called before the first frame update
     void Update()
     {
-        if (child.childCount > 4)
+        if (this.transform.childCount > 4&&!Outro())
         {
-            print("Well done!");
-            
+            Outro();
         }
        
     }
 
-
+    public bool Outro()
+    {
+        hand.gameObject.tag = "end";
+        this.GetComponent<AudioSource>().clip = outro;
+        this.GetComponent<AudioSource>().Play();
+        return true;
+    }
 
 }
