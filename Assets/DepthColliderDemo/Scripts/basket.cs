@@ -6,24 +6,38 @@ public class basket : MonoBehaviour
 {
     public AudioClip outro;
     public GameObject hand;
+    public Transform child;
+    public Transform parent;
 
-   
-    // Start is called before the first frame update
+    private int outroState = 0;
+
     void Update()
     {
-        if (this.transform.childCount > 4&&!Outro())
+       // print(this.transform.childCount);
+        if (this.transform.childCount > 4 &&outroState == 0)
         {
+            hand.gameObject.tag = "end";
             Outro();
+
         }
        
     }
 
     public bool Outro()
     {
-        hand.gameObject.tag = "end";
-        this.GetComponent<AudioSource>().clip = outro;
-        this.GetComponent<AudioSource>().Play();
-        return true;
+        if ( outroState == 0 && this.transform.childCount > 4)
+        {
+            child.transform.SetParent(parent);
+            child.transform.localPosition = new Vector3(0, -0.5f, 0);
+            child.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            child.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 45));
+            this.GetComponent<AudioSource>().clip = outro;
+            this.GetComponent<AudioSource>().Play();
+            outroState++;
+            return true;
+        }
+        else
+            return false;
     }
 
 }

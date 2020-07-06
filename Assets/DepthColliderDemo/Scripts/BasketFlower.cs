@@ -15,9 +15,6 @@ public class BasketFlower : MonoBehaviour
         gameObject.tag = "basketFlower";
     }
 
-    void Update()
-    {
-    }
 
     void OnTriggerEnter2D(Collider2D col)
     {

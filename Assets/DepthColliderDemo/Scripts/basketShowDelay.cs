@@ -14,22 +14,15 @@ public class basketShowDelay : MonoBehaviour
     public Transform parent;
 
     public GameObject hand;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
     // Update is called once per frame
     void Update()
     {
-
         if (!intro.isPlaying)
         {
             count++;
             ongoing();
-            
-
         }
     }
 
@@ -40,7 +33,6 @@ public class basketShowDelay : MonoBehaviour
 
             grass.Play();
             child.transform.SetParent(parent);
-            //child.transform.localPosition = new Vector3(0, 0, 0);
             child.transform.localPosition = new Vector3(1, -5.7f, 0);
             child.transform.localScale = new Vector3(1, 1, 20);
             child.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
