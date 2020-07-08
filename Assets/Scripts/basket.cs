@@ -4,23 +4,41 @@ using UnityEngine;
 
 public class basket : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        gameObject.tag = "basket";
-    }
+    public AudioClip outro;
+    public GameObject hand;
+    public Transform child;
+    public Transform parent;
 
-    // Update is called once per frame
+    private int outroState = 0;
+
     void Update()
     {
-        
+       // print(this.transform.childCount);
+        if (this.transform.childCount > 4 &&outroState == 0)
+        {
+            hand.gameObject.tag = "end";
+            Outro();
+
+        }
+       
     }
 
-    /*void OnMouseDown()
+    public bool Outro()
     {
-        Debug.Log("Sprite Clicked");
-        gameObject.GetComponent<AudioSource>().Play();
-    }*/
-
+        if ( outroState == 0 && this.transform.childCount > 4)
+        {
+            this.GetComponent<AudioSource>().clip = outro;
+            this.GetComponent<AudioSource>().Play();
+            child.transform.SetParent(parent);
+            child.transform.localPosition = new Vector3(0, -0.5f, 0);
+            child.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            child.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 45));
+            
+            outroState++;
+            return true;
+        }
+        else
+            return false;
+    }
 
 }

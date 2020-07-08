@@ -1,62 +1,49 @@
-﻿using System.Collections;
+﻿//using NUnit.Framework;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class flower : MonoBehaviour
-{
 
-    private float startPosX;
-    private float startPosY;
-    private bool isBeingHeld = false;
+public class flower : MonoBehaviour {
 
+
+    public GameObject child;
+    public Transform parent;
+
+    private SpriteRenderer sprite;
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.tag = "flower";
-    }
+        sprite = GetComponent<SpriteRenderer>();
+        
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(isBeingHeld == true)
-        {
-            Vector3 mousePos;
-            mousePos = Input.mousePosition;
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
-            this.gameObject.transform.localPosition = new Vector3(mousePos.x - startPosX, mousePos.y - startPosY, 0);
-           
-        }
-    }
-
-    private void OnMouseDown()
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-            Vector3 mousePos;
-            mousePos = Input.mousePosition;
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
-            startPosX = mousePos.x - this.transform.localPosition.x;
-            startPosY = mousePos.y - this.transform.localPosition.y;
-
-            isBeingHeld = true;
-        }
-    }
-
-    private void OnMouseUp()
-    {
-        isBeingHeld = false;
+        if(sprite.name=="tulpe"||sprite.name == "gänse")
+            gameObject.tag = "flower";
+        else
+            gameObject.tag = "weed";
+        
+        child = this.gameObject;
+        
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        //Check to see if the tag on the collider is equal to Enemy
-        if (col.gameObject.CompareTag ("basket"))
+        if (col.gameObject.CompareTag("empty")&& (gameObject.tag == "flower"))
         {
-            Debug.Log("Triggered by basket");
-            gameObject.GetComponent<AudioSource>().Play();
+            this.GetComponent<AudioSource>().Play();
+            child.transform.SetParent(parent);
+            child.transform.localPosition = new Vector3(0, 0, 0);
+            child.transform.localScale = new Vector3(0.5f, 0.5f, 20);
+            child.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            this.tag += "Finish";
         }
+
+        if (col.gameObject.CompareTag("empty") && ( gameObject.tag == "weed"))
+        {
+            print(col.gameObject.tag);
+            this.GetComponent<AudioSource>().Play();
+        }
+
     }
 
 }
