@@ -39,8 +39,7 @@ public class flower : MonoBehaviour {
         }
 
         if (col.gameObject.CompareTag("empty") && ( gameObject.tag == "weed"))
-        {
-            print(col.gameObject.tag);
+        { 
             this.GetComponent<AudioSource>().Play();
         }
 
